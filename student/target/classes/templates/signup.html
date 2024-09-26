@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="base::Layout(~{::section})">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>About page</title>
+    </head>
+    <body>
+        <section>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 offset-md-3">
+                        
+                        <div class="jumbotron">
+                            <h1 class="text-center">Register Here</h1>
+                        </div>
+                        
+                        <div class="card mt-3">
+                          
+                            <form action="" th:action="@{/login}" method="post" th:object="${student}">
+
+                                <!-- Email field -->
+
+                                <div class="form-group">                                
+                                    <label for="EmailID">Email Id</label>
+                                    <input type="email" class="form-control" id="EmailID" 
+                                           placeholder="name@example.com" name="EmailID"aria-describedby="emailhelp" 
+                                           th:value="${student.EmailID}"
+                                           autofocus="true" required />
+                                </div>
+
+                                <!-- Password field --> 
+
+                                <div class="form-group">                            
+                                    <label for="Password">Password</label>
+                                    <input type="password" class="form-control" id="Password" placeholder="Enter Your Password"
+                                           aria-describedby="Password" required/>
+                                </div>
+                                
+                                <div><a href="{path='/forgot-password'}">Forgot password?</a> </div>
+
+                                <button class="btn btn-primary mt-3 btn-block" type="submit">Login</button>
+
+                            </form>
+                         
+           </div>
+                    </div>
+                </div>
+            </div>
+        </section> 
+
+    </body>
+</html>

@@ -1,0 +1,10 @@
+com\student\student\Repository\UserRepository.class
+com\student\student\StudentApplication.class
+com\student\student\controller\StudentController.class
+com\student\student\services\CustomUserDetailsService.class
+com\student\student\config\StudentConfiguration.class
+com\student\student\entity\Attempts.class
+com\student\student\entity\User.class
+com\student\student\security\AuthProvider.class
+com\student\student\controller\HomeController.class
+com\student\student\Repository\AttemptsRepository.class
