@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Index</title>
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"
+      integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"    ></script>
+     <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    </head>
+<body> 
+     <script src="main.js" type="text/javascript"></script>
+    <nav class="navbar navbar-expand-md">
+        <a class="navbar-brand" href="#">Logo</a>
+        <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#main-navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="main-navigation">
+            <ul class="pagination">
+            </ul>
+            <ul class="navbar-nav">
+                <li class="active" >
+                    <a class="nav-link" href="#">Home
+                        <i class="bi-house"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Sign in <i class="bi-phone-fill"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Register </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="C:\Users\admin\Desktop\bootstrap\About.html">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact us<i class="bi-telephone"></i></a>
+                </li>
+            </ul>
+        </div>
+    </nav>  
+
+    <div class="Container">
+
+        <div class="jumbotron">
+            <h1 class="text-success text-center"> Registration form</h1>
+        </div>
+        <div align="right">
+            <button type="submit" class="btn btn-outline-success d-block btn-color"><a href="EditStudent.html">EditData</a></button>
+        </div>
+        <div class ="col-lg-8 m-auto d-block" id="updatefrom">
+            <form id="loginForm"  method="post" action="AnuragSinghal">
+
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label>First name:</label>
+                        <input type="text"  class="form-control" name="FirstName" id="fname">
+                        <span id='fnamee'   class="text-danger font-weight-bold"></span> 
+                    </div> 
+
+                    <div class="form-group col-md-6">
+                        <label>Last name:</label>
+                        <input type="text"  class="form-control" name="LastName" id="lname">
+                        <span id='lnamee' class="text-danger font-weight-bold"></span> 
+                    </div> 
+                    <div class="form-group col-md-6">
+                        <label>E-mail Id:</label>
+                        <input type="email"  class="form-control" name="EmailID" id="eid">
+                        <span id='emaill' class="text-danger font-weight-bold"></span> 
+                    </div> 
+
+                    <div class="form-group col-md-6">
+                        <label>password</label>
+                        <input type="password"  class="form-control" name="password" id="psd">
+                        <span id='pswd' class="text-danger font-weight-bold"></span> 
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label>Mobile  No.:</label>
+                        <input type="text"  class="form-control" name="MobileNo" id="mno" >
+                        <span id='MobileNo' class="text-danger font-weight-bold"></span>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label>Pan Card</label>
+                        <input type="text"  class="form-control" name="PanCard" id="PanNo" >
+                        <span id='PanNum' class="text-danger font-weight-bold"></span>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label>Date of Birth:</label>
+                        <input type="Date" class="form-control"  name="DOB" id="DOB">
+                        <span id='Dob' class="text-danger font-weight-bold"></span> 
+                    </div> 
+                    <div class="form-group col-md-6">
+                        <label>address:</label>
+                        <input type="text" class="form-control" name="address"  id="addr" >
+                        <span id='adr' class="text-danger font-weight-bold"></span> 
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label>Pin Code: </label>
+                        <input type="text" class="form-control" name="PinCode"   id="Pincode">
+                        <span id='Pin' class="text-danger font-weight-bold"></span> 
+                    </div> 
+                </div> 
+
+                <div class="btn-group">
+                    <button type="submit" class="btn btn-primary btn-color btn-bg-color btn-sm col-xs-2 margin-left" onsubmit="callAjax()">Submit
+                        <span class="badge" aria-hidden="true">1</span> 
+                    </button>
+                    <button type="button" class="btn btn-outline-success d-block btn-color btn-bg-color btn-sm col-xs-2 margin-left">
+                         <a href="ShowData">Show Data</a> 
+                        <!--<a href="showData1.html"><a href="ShowData">Show Data</a></a>-->
+                    </button>
+ <button id="download-button" type="button" class="btn btn-outline-success d-block btn-color btn-bg-color btn-sm col-xs-2 margin-left">Download as PDF</button>
+ <div id="invoice"></div>
+                </div>
+</form>
+ <!--onsubmit="callAjax(); return  validation(); return validateDOB();"-->
+            
+        </div>
+    </div> 
+
+</div>
+</div> 
+
+</body>
+</html>
